@@ -1,0 +1,229 @@
+<!DOCTYPE html ng-app="myApp">
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="myApp">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/png" href="img/favicon-16x16.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Raounak Sharma</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custome CSS -->
+    <link rel="stylesheet" media="screen" href="app.css">
+
+</head>
+
+<body layout="column" ng-controller="MainController">
+    <div id="particles-js"></div>
+
+    <div id="navbar" class="navbarAtTop">
+        <p id="myName" style="font-family: myFont; font-size: 40px; margin: 0;">Raounak Sharma</p>
+        <span flex></span>
+        <div class="isSmall">
+            <div class="makingCenter" style="height:100%; padding: 8px 8px;"><a href="#scrollcontent">Portfolio</a></div>
+            <div style="height:100%; padding: 8px 8px;"><a href="#follow">Follow</a></div>
+        </div>
+<!--         <div class="dropdown">
+            <button class="dropbtn"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></button>
+            <div class="dropdown-content">
+                <a href="#scrollcontent">Portfolio</a>
+                <a href="#follow">Follow</a>
+            </div>
+        </div> -->
+        <div class="dropdown" style="float:right;">
+          <button class="dropbtn"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></button>
+          <div class="dropdown-content">
+            <a href="#scrollcontent">Portfolio</a>
+            <a href="#follow">Follow</a>
+          </div>
+        </div>
+    </div>
+
+
+    <div id="myHeader" class="makingCenter" layout-fill flex="grow" style="justify-content:space-around; flex-direction:column; margin-bottom: 20px; backgound:transparent">
+        <img src="img/myPhoto.jpg" class="img-circle" />
+        <div style="display: flex;flex-direction: row;">
+            <p style="font-family: forTypedJs; font-weight: 100; font-size: 35px; color:orange;">I am</p>&emsp;
+            <p id="details" style="font-weight: 100; font-size: 35px; color:orange;"></p>
+        </div>
+        <md-button href="https://drive.google.com/file/d/0B6-trA3vweT2NE9iUWtRa0tNVTQ/view?usp=sharing" class="md-raised" style=" box-shadow: 10px 10px 5px #888888; background-color: orange; border: orange solid 1px; color: white;"><span class="md-headline">Curriculum Vitae</span></md-button>
+    </div>
+
+    <div id="scrollcontent" style="margin-bottom: 50px;">
+        <div>
+
+            <div id="content" style="position: relative;">
+                <h1 style="font-family: seasrn; font-size: 32px;">Portfolio</h1>
+                <div class="makingCenter" style="flex-direction: column; margin: 50px 0px 50px 0px;">
+                    <div class="makingCenter" style="border-radius: 50%; background-color: orange; width: 100px; height: 100px;">
+                        <i class="fa fa-laptop fa-5x" aria-hidden="true"></i>
+                    </div>
+                    <br>
+                    <p class="seasrnFontSize" style="font-family: seasrn;">About</p>
+                    <br>
+                    <p>You can find all my Projects on my github.</p>
+                    <p>My handle is <strong><a href="https://www.github.com/Ronaq13">@Ronaq13</a></strong>, 
+                    </p>
+                    <p>find me and hit me up.</p>
+                </div>
+                -----
+                <div class="makingCenter" style="flex-direction: column; margin: 50px 0px 50px 0px;">
+                    <div class="makingCenter" style="border-radius: 50%; background-color: orange; width: 100px; height: 100px;">
+                        <i class="fa fa-code fa-5x" aria-hidden="true"></i>
+                    </div>
+                    <br>
+                    <p class="seasrnFontSize" style="font-family: seasrn;">Skills</p>
+                    <br>
+                    <p><strong>Languages</strong></p>
+                    <p>C,C++,JavaScript,Ruby</p>
+                    <p><strong>Frameworks</strong></p>
+                    <p>Flex, Bootstrap, Angular, Sinatra, Rails</p>
+                    <p><strong>Tools</strong></p>
+                    <p>Linux, Rubymine, Visual Code</p>
+                </div>
+                -----
+                <div class="makingCenter" style="flex-direction: column; margin: 50px 0px 0px 0px;">
+                    <div class="makingCenter" style="border-radius: 50%; background-color: orange; width: 100px; height: 100px;">
+                        <i class="fa fa-globe fa-5x" aria-hidden="true"></i>
+                    </div>
+                    <br>
+                    <p class="seasrnFontSize" style="font-family: seasrn;">Links</p>
+                    <br>
+                    <div style="display: flex; align-items: center;">
+                         <p>Hacker_Earth</p> &nbsp;
+                        <p><strong><a href="https://www.hackerearth.com/@raounak">@raounak</a></strong></p>
+                    </div>
+                    <p>Codechef</p>
+                    <strong><a href="#"></a></strong>
+                </div>
+                -----
+                <div class="makingCenter" style="flex-direction: column; margin: 50px 0px 0px 0px;">
+                    <div class="makingCenter" style="border-radius: 50%; background-color: orange; width: 100px; height: 100px;">
+                        <i class="fa fa-briefcase fa-4x" aria-hidden="true"></i>
+                    </div>
+                    <br>
+                    <p class="seasrnFontSize" style="font-family: seasrn;">Internships</p>
+                    <br>
+                    <p><em>Aviate Softwares</em></p>
+                    <strong><a href="#"></a></strong>
+                    <p style="margin: 0px 10px 0px 10px;">I was appointed as a UI/UX intern at aviate software and, I work on Angular and Firebase.
+                    <br>I made a well responsive and single page dashboard for them using angular material design.</p>
+                    <p><em><strong><a href="https://drive.google.com/file/d/0B6-trA3vweT2VkdfTTE3RnBtcDBVakVSNzZ0ZWpYMkV5VE5F/view?usp=sharing">Experience letter</a></strong></em></p>
+
+                </div>
+            </div>
+
+
+            <footer layout="column" style="background-color: black;margin-top: 100px;">
+                <div style="padding: 16px 16px; display: flex; justify-content: center;">
+                    <p id="myEmail" style="color:orange;">raounaqsharma@gmail.com</p>
+                </div>
+                <md-divider></md-divider>
+                <div id="follow" style="width: 100%;padding: 8px 8px; display: flex;justify-content: space-around;align-items: center;">
+                    <button id="btn1" class="btn" style="color: orange; background: transparent;"><a class="button" href="https://www.facebook.com/raounak.sharma"><i class="fa fa-facebook fa-2x fa-cog" aria-hidden="true"></i></a></button>
+                    <button id="btn2" class="btn" style="color: orange; background: transparent;"><a href="https://twitter.com/Raounaksharma"><i class="fa fa-twitter fa-2x fa-cog" aria-hidden="true"></i></a></button>
+                    <button id="btn3" class="btn" style="color: orange; background: transparent;"><a class="button" href="https://www.linkedin.com/in/raounak-sharma-63219366/"><i class="fa fa-linkedin fa-2x fa-cog" aria-hidden="true"></i></a></button>
+                    <button id="btn4" class="btn" style="color: orange; background: transparent;"><a  href="https://github.com/Ronaq13"><i class="fa fa-github fa-2x fa-cog" aria-hidden="true"></i></a></button>
+                </div>
+                <div class="makingCenter" style="margin-top: 20px;">
+                    <span class="copyright" style="color:orange; font-size: 16px;">
+                Copyright &copy; Raounak Sharma &nbsp;| &nbsp;2017</span>
+                </div>
+            </footer>
+
+
+
+
+            <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+
+
+            <!-- Typed.js -->
+            <script src="bower_components/typed.js/dist/typed.min.js"></script>
+
+            <!-- Bootstrap -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+            <!-- Particle js -->
+            <script src="particles.js"></script>
+            <script src="app.js"></script>
+
+            <!-- controller -->
+            <script src="controllers/MainController.js"></script>
+
+            <!-- Fontawesome -->
+            <script src="https://use.fontawesome.com/61130ce339.js"></script>
+
+
+
+
+
+
+            <script>
+                $(function() {
+                    $("#details").typed({
+                        strings: ["^Raounak Sharma", " University topper^1000", " Angular-Dev", " Rubiest"],
+                        typeSpeed: 0,
+                        loop: true
+                    });
+                });
+
+                // for changing navbar
+                $(window).scroll(function() {
+                    var scrollPos = $(document).scrollTop();
+                    console.log(scrollPos);
+                    if (scrollPos <= 20) {
+                        $("#navbar").removeClass("navbarAtScroll").addClass("navbarAtTop");
+                    } else {
+                        $("#navbar").addClass("navbarAtScroll").removeClass("navbarAtTop");
+                    }
+                });
+            </script>
+
+            <script>
+                $(document).ready(function() {
+                    // Add smooth scrolling to all links
+                    $("a").on('click', function(event) {
+
+                        // Make sure this.hash has a value before overriding default behavior
+                        if (this.hash !== "") {
+                            // Prevent default anchor click behavior
+                            event.preventDefault();
+
+                            // Store hash
+                            var hash = this.hash;
+
+                            // Using jQuery's animate() method to add smooth page scroll
+                            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                            $('html, body').animate({
+                                scrollTop: $(hash).offset().top
+                            }, 800, function() {
+
+                                // Add hash (#) to URL when done scrolling (default click behavior)
+                                window.location.hash = hash;
+                            });
+                        } // End if
+                    });
+                });
+            </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+<!-- Views -->
+<div layout="column" style="justify-content: space-around;">
+    <div data-aos="flip-right" data-aos-offset="600" data-aos-duration="800" id="1stView" ng-hide="!isViewGtMd" layout-padding style="height: 100%; margin: 50px 50px 50px 50px;">
+        <md-list layout="column" ng-repeat="skill in skills" style="padding: 0px;">
+            <md-list-item layout="row" style="padding: 0px;">
+                <!-- First part -->
+                <div flex layout-fill layout="row" layout="end start">
+                    <div layout-fill ng-if="$index%2!=0">
+                        <md-card flex layout="column" layout-align="start start" layout-padding>
+                            <md-list flex layout="column" layout-fill ng-repeat="language in languages" style="padding: 0px;">
+                                <md-list-item layout="row" layout-align="start center" style="padding: 0px;">
+                                    <p flex="20">{{language.name}}</p>
+                                    <span flex="5"></span>
+                                    <md-progress-linear flex="75" md-mode="determinate" value="{{language.value}}"></md-progress-linear>
+                                </md-list-item>
+                            </md-list>
+                        </md-card>
+                    </div>
+                </div>
+                <!-- middle part -->
+                <div layout="column" layout-align="start center" style="height: 100%;">
+                    <md-button aria-label="icon" style="margin: 0px 8px 0px 8px;background-color: {{skill.background_color}}">
+                        {{skill.name}}
+                    </md-button>
+                    <div class="vertical-divider"></div>
+                </div>
+                <!-- end part -->
+                <div flex layout-fill layout="row" layout-align="start start">
+                    <div ng-if="$index%2==0" layout-fill>
+                        <md-card flex ng-if="$index == 0">
+                            <md-list style="padding: 0px;">
+                                <md-list-item class="md-3-line" ng-repeat="framework in frameworks" ng-click="null">
+                                    <img ng-src="{{framework.path}}" class="md-avatar" alt="{{framework.name}}" />
+                                    <div class="md-list-item-text" layout="column">
+                                        <h3>{{ framework.name }}</h3>
+                                        <md-progress-linear md-mode="determinate" value="{{framework.value}}"></md-progress-linear>
+                                    </div>
+                                </md-list-item>
+                            </md-list>
+                        </md-card>
+                        <md-card flex ng-if="$index == 2">
+                            <md-list style="padding: 0px;">
+                                <md-list-item class="md-3-line" ng-repeat="tool in tools" ng-click="null">
+                                    <img ng-src="{{tool.path}}" class="md-avatar" alt="{{tool.name}}" />
+                                    <div class="md-list-item-text" layout="column">
+                                        <h3>{{ tool.name }}</h3>
+                                        <md-progress-linear md-mode="determinate" value="{{tool.value}}"></md-progress-linear>
+                                    </div>
+                                </md-list-item>
+                            </md-list>
+                        </md-card>
+                    </div>
+                </div>
+            </md-list-item>
+        </md-list>
+    </div>
+    <!-- At small screen -->
+    <div ng-hide="isViewGtMd" data-aos="flip-up" data-aos-offset="300" data-aos-duration="800" layout-padding style="height: 100%;margin-top: 50px;">
+        <md-list layout="column" ng-repeat="skill in skills" style="padding: 0px;">
+
+            <md-list-item layout="row" style="padding: 0px;">
+
+                <div flex="30" layout="column" layout-align="start center" style="height: 100%;">
+                    <md-button aria-label="icon" style="margin: 0px 8px 0px 8px;background-color: {{skill.background_color}}">
+                        {{skill.name}}
+                    </md-button>
+                    <div class="vertical-divider"></div>
+                </div>
+                <!-- First part -->
+                <div flex="70" layout-fill layout="row" layout="end start">
+                    <div layout-fill ng-if="$index%2!=0">
+                        <md-card flex layout="column" layout-align="start start" layout-padding>
+                            <md-list flex layout="column" layout-fill ng-repeat="language in languages" style="padding: 0px;">
+                                <md-list-item layout="column" layout-align="start start" style="padding: 0px;">
+                                    <p flex>{{language.name}}</p>
+                                    <md-progress-linear flex md-mode="determinate" value="{{language.value}}"></md-progress-linear>
+                                </md-list-item>
+                            </md-list>
+                        </md-card>
+                    </div>
+                    <div ng-if="$index%2==0" layout-fill>
+                        <md-card flex ng-if="$index == 0">
+                            <md-list style="padding: 0px;">
+                                <md-list-item class="md-3-line" ng-repeat="framework in frameworks" ng-click="null">
+                                    <img ng-src="{{framework.path}}" class="md-avatar" alt="{{framework.name}}" />
+                                    <div class="md-list-item-text" layout="column">
+                                        <h3>{{ framework.name }}</h3>
+                                        <md-progress-linear md-mode="determinate" value="{{framework.value}}"></md-progress-linear>
+                                    </div>
+                                </md-list-item>
+                            </md-list>
+                        </md-card>
+                        <md-card flex ng-if="$index == 2">
+                            <md-list style="padding: 0px;">
+                                <md-list-item class="md-3-line" ng-repeat="tool in tools" ng-click="null">
+                                    <img ng-src="{{tool.path}}" class="md-avatar" alt="{{tool.name}}" />
+                                    <div class="md-list-item-text" layout="column">
+                                        <h3>{{ tool.name }}</h3>
+                                        <md-progress-linear md-mode="determinate" value="{{tool.value}}"></md-progress-linear>
+                                    </div>
+                                </md-list-item>
+                            </md-list>
+                        </md-card>
+                    </div>
+                </div>
+            </md-list-item>
+        </md-list>
+    </div>
+    <div data-aos="zoom-in" class="md-whiteframe-20dp" style="margin: 50px 0px 0px 0px;" flex layout="column" style="justify-content: space-around; align-items: center;">
+        <div layout="row" style="justify-content: center; align-items: center;">
+            <span class="md-headline" id="forProject"></span>
+        </div>
+        <div flex layout="row" style="justify-content: space-around; align-items: center;">
+            <md-card style="justify-content: center; align-items: center; height: 200px; width: 200px;">
+                Angular
+            </md-card>
+            <md-card style="justify-content: center; align-items: center; height: 200px; width: 200px;">
+                Sinatra
+            </md-card>
+            <md-card style="justify-content: center; align-items: center; height: 200px; width: 200px;">
+                Bootstrap
+            </md-card>
+        </div>
+    </div>
+
+
+    <!--<div data-aos="zoom-in-right" class="md-whiteframe-20dp" flex>-->
+    <!--<md-card >hello</md-card>-->
+    <!--</div>-->
+
+</div>
+<script>
+    //        $(window).scroll(function () {
+    //
+    //            $("#forProject").typed({
+    //                strings: ["Projects I did"],
+    //                typeSpeed: 0,
+    //                contentType: 'html',
+    //                loop: false
+    //            });
+    //        });
+</script>
